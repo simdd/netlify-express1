@@ -6,9 +6,6 @@
   external_node_modules = ["express"]
   node_bundler = "esbuild"
 
-[[edge_functions]]
-  directory = "edge-functions"
-
 [[redirects]]
   force = true
   from = "/api/express/*"
