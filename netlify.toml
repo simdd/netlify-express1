@@ -6,6 +6,9 @@
   external_node_modules = ["express"]
   node_bundler = "esbuild"
 
+[edge_functions]
+  directory = "edge-functions"
+
 [[redirects]]
   force = true
   from = "/api/express/*"
@@ -20,15 +23,9 @@
 
 [[redirects]]
   force = true
-  from = "/api/edge-handle/*"
+  from = "/api/handle/*"
   status = 200
-  to = "/.netlify/edge-functions/handle/:splat"
-
-[[redirects]]
-  force = true
-  from = "/api/edge-express/*"
-  status = 200
-  to = "/.netlify/edge-functions/express/:splat"
+  to = "/.netlify/functions/handle/:splat"
 
 [[redirects]]
   force = true
