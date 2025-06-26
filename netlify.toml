@@ -1,0 +1,43 @@
+[build]
+  command = "echo No build"
+  functions = "functions"
+
+[functions]
+  external_node_modules = ["express"]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  force = true
+  from = "/api/express/*"
+  status = 200
+  to = "/.netlify/functions/express/:splat"
+
+[[redirects]]
+  force = true
+  from = "/api/function/*"
+  status = 200
+  to = "/.netlify/functions/function/:splat"
+
+[[redirects]]
+  force = true
+  from = "/api/edge-handle/*"
+  status = 200
+  to = "/.netlify/edge-functions/handle/:splat"
+
+[[redirects]]
+  force = true
+  from = "/api/edge-express/*"
+  status = 200
+  to = "/.netlify/edge-functions/express/:splat"
+
+[[redirects]]
+  force = true
+  from = "/api/edge-function/*"
+  status = 200
+  to = "/.netlify/edge-functions/function/:splat"
+
+[[redirects]]
+  force = true
+  from = "/api/edge-handle/*"
+  status = 200
+  to = "/.netlify/edge-functions/handle/:splat"
