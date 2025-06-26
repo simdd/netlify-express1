@@ -1,6 +1,9 @@
 [build]
   command = "echo No build"
 
+[functions]
+  directory = "functions"
+
 [[redirects]]
   force = true
   from = "/api/express/*"
