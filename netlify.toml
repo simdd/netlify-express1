@@ -2,10 +2,6 @@
   command = "echo No build"
   functions = "functions"
 
-[functions]
-  external_node_modules = ["express"]
-  node_bundler = "esbuild"
-
 [[redirects]]
   force = true
   from = "/api/express/*"
@@ -24,14 +20,10 @@
   status = 200
   to = "/.netlify/functions/handle/:splat"
 
-[[redirects]]
-  force = true
-  from = "/api/edge-function/*"
-  status = 200
-  to = "/.netlify/edge-functions/function/:splat"
+[[edge_functions]]
+  path = "/edge/function"
+  function = "function"
 
-[[redirects]]
-  force = true
-  from = "/api/edge-handle/*"
-  status = 200
-  to = "/.netlify/edge-functions/handle/:splat"
+[[edge_functions]]
+  path = "/edge/handle"
+  function = "handle"
