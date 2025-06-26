@@ -2,7 +2,7 @@
   command = "echo No build"
 
 [functions]
-  directory = "functions"
+  directory = "netlify/functions"
 
 [[redirects]]
   force = true
