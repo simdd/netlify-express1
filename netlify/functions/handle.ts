@@ -31,10 +31,9 @@ export const handler: Handler = async (event, context) => {
             `File content: ${readContent}`
         );
     } catch (error) {
-        console.error('Error handling file:', error);
         return new Response(
-            `Error: ${error instanceof Error ? error.message : String(error)}`,
-            { status: 500 }
+            `handle on netlify ${cfg.getName()}\n\n` +
+            `error: ${error}`
         );
     }
 }
