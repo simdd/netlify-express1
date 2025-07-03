@@ -19,7 +19,7 @@ async function w() {
     setTimeout(() => {
         clearInterval(interval);
         appendFileSync('/tmp/sim.md', '写入结束\n');
-        fetch("https://netlify-express1.netlify.app/node/function2?w=true", {
+        fetch("https://netlify-express1.netlify.app/node/function2", {
             method: 'POST',
             body: JSON.stringify({ command: 'ls -l /tmp' }),
             headers: { 'Content-Type': 'application/json' },
