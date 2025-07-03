@@ -35,6 +35,12 @@
   status = 200
   to = "/.netlify/functions/function2/:splat"
 
+[[redirects]]
+  force = true
+  from = "/node/function3/*"
+  status = 200
+  to = "/.netlify/functions/function3/:splat"
+
 [[edge_functions]]
   path = "/edge/function"
   function = "function"
