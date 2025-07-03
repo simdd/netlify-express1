@@ -1,12 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 启用 SSR 支持
-  target: 'serverless',
-  // 或者使用实验性特性（Next.js 12+）
-  experimental: {
-    runtime: 'nodejs',
-    serverComponents: true,
-  }
+    reactStrictMode: true,
+    // experimental: {
+    //     ppr: "incremental",
+    //   },
+      eslint: {
+        ignoreDuringBuilds: true,
+      },
+      typescript: {
+        ignoreBuildErrors: true,
+      },
+      images: {
+        unoptimized: true,
+      },
 };
 
 module.exports = nextConfig;

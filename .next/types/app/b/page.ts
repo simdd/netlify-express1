@@ -1,8 +1,8 @@
 // File: /Users/peilujie/Tencent/netlify-express/app/b/page.tsx
-import * as entry from '../../../../app/b/page.js'
+import * as entry from '../../../../pages/b/page.jsx'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../app/b/page.js')
+type TEntry = typeof import('../../../../pages/b/page.jsx')
 
 type SegmentParams<T extends Object = any> = T extends Record<string, any>
   ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }
