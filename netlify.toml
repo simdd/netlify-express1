@@ -36,3 +36,6 @@
 [[edge_functions]]
   path = "/edge/handle"
   function = "handle"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
