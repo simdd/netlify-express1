@@ -13,7 +13,8 @@ async function run(com) {
 }
 
 export default async (req: Request, context: Context) => {
-    const ret = await run(context.params.command);
+    const body = await req.json();
+    const ret = await run(body.command);
     const text = ret.join("\n")
     const result = text.split('\n').filter(e => e);
     return new Response(JSON.stringify(result));
