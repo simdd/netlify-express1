@@ -1,30 +1,31 @@
 [build]
-  command = "echo No build"
+  command = "npm run build"
+  publish = ".next"
 
 [functions]
   directory = "netlify/functions"
 
 [[redirects]]
   force = true
-  from = "/api/express/*"
+  from = "/node/express/*"
   status = 200
   to = "/.netlify/functions/express/:splat"
 
 [[redirects]]
   force = true
-  from = "/api/function/*"
+  from = "/node/function/*"
   status = 200
   to = "/.netlify/functions/function/:splat"
 
 [[redirects]]
   force = true
-  from = "/api/function1/*"
+  from = "/node/function1/*"
   status = 200
   to = "/.netlify/functions/function1/:splat"
 
 [[redirects]]
   force = true
-  from = "/api/handle/*"
+  from = "/node/handle/*"
   status = 200
   to = "/.netlify/functions/handle/:splat"
 
