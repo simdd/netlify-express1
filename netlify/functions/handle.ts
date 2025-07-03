@@ -17,6 +17,12 @@ export const handler: Handler = async (event, context) => {
         if (fs.existsSync(tmpDir)) {
             // 读取文件
             readContent = fs.readFileSync(filePath, 'utf8');
+        } else {
+            return new Response(
+                `handle on netlify ${cfg.getName()}\n\n` +
+                `File created at: null\n` +
+                `File content: null`
+            );
         }
 
         return new Response(
