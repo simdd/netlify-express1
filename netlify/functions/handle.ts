@@ -12,30 +12,33 @@ export const handler: Handler = async (event, context) => {
     const filePath = path.join(tmpDir, 'sim.md');
     let readContent = '';
 
-    return new Response('ok');
-
     try {
         // 确保 /tmp 目录存在
         if (fs.existsSync(tmpDir)) {
             // 读取文件
             readContent = fs.readFileSync(filePath, 'utf8');
         } else {
-            return new Response(
-                `handle on netlify ${cfg.getName()}\n\n` +
-                `File created at: null\n` +
-                `File content: null`
-            );
+            return {
+                body: `handle on netlify ${cfg.getName()}\n\n` +
+                    `File created at: null\n` +
+                    `File content: null`,
+                statusCode: 200,
+            }
+
         }
 
-        return new Response(
-            `handle on netlify ${cfg.getName()}\n\n` +
-            `File created at: ${filePath}\n` +
-            `File content: ${readContent}`
-        );
+        return {
+            body: `handle on netlify ${cfg.getName()}\n\n` +
+                `File created at: ${filePath}\n` +
+                `File content: ${readContent}`,
+            statusCode: 200,
+        }
+
     } catch (error) {
-        return new Response(
-            `handle on netlify ${cfg.getName()}\n\n` +
-            `error: ${error}`
-        );
+        return {
+            body: `handle on netlify ${cfg.getName()}\n\n` +
+                `error: ${error}`,
+            statusCode: 200,
+        }
     }
 }
