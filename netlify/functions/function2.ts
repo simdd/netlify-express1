@@ -1,3 +1,4 @@
+import { Context } from '@netlify/functions';
 import { execSync } from 'child_process'
 
 async function run(com) {
@@ -11,9 +12,9 @@ async function run(com) {
     return ret;
 }
 
-export default async (req, res) => {
-    const ret = await run(req.body.command);
+export default async (req: Request, context: Context) => {
+    const ret = await run(context.params.command);
     const text = ret.join("\n")
     const result = text.split('\n').filter(e => e);
-    return res.json(result);
+    return new Response(JSON.stringify(result));
 }
