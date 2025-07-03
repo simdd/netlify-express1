@@ -2,4 +2,37 @@
   command = "npm run build"
   publish = ".next"
 
+[functions]
+  directory = "netlify/functions"
 
+[[redirects]]
+  force = true
+  from = "/node/express/*"
+  status = 200
+  to = "/.netlify/functions/express/:splat"
+
+[[redirects]]
+  force = true
+  from = "/node/function/*"
+  status = 200
+  to = "/.netlify/functions/function/:splat"
+
+[[redirects]]
+  force = true
+  from = "/node/function1/*"
+  status = 200
+  to = "/.netlify/functions/function1/:splat"
+
+[[redirects]]
+  force = true
+  from = "/node/handle/*"
+  status = 200
+  to = "/.netlify/functions/handle/:splat"
+
+[[edge_functions]]
+  path = "/edge/function"
+  function = "function"
+
+[[edge_functions]]
+  path = "/edge/handle"
+  function = "handle"

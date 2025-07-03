@@ -14,7 +14,32 @@
   ],
   "headers": [],
   "dynamicRoutes": [],
-  "staticRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/a",
+      "regex": "^/a(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/a(?:/)?$"
+    },
+    {
+      "page": "/b",
+      "regex": "^/b(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/b(?:/)?$"
+    }
+  ],
   "dataRoutes": [],
   "rsc": {
     "header": "RSC",
