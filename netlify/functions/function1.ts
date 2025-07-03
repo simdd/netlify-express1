@@ -16,7 +16,7 @@ export default async (req: Request, context: Context) => {
         // 确保 /tmp 目录存在
         if (fs.existsSync(tmpDir)) {
             // 列出 /tmp 目录下的所有文件
-            filesList = fs.readdirSync('/');
+            filesList = fs.readdirSync(tmpDir);
 
             // 尝试读取 sim.md 文件（如果存在）
             if (fs.existsSync(filePath)) {
