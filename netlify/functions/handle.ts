@@ -12,6 +12,8 @@ export const handler: Handler = async (event, context) => {
     const filePath = path.join(tmpDir, 'sim.md');
     let readContent = '';
 
+    return new Response('ok');
+
     try {
         // 确保 /tmp 目录存在
         if (fs.existsSync(tmpDir)) {
