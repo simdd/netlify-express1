@@ -18,6 +18,12 @@
 
 [[redirects]]
   force = true
+  from = "/api/function1/*"
+  status = 200
+  to = "/.netlify/functions/function1/:splat"
+
+[[redirects]]
+  force = true
   from = "/api/handle/*"
   status = 200
   to = "/.netlify/functions/handle/:splat"
