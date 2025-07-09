@@ -41,6 +41,18 @@
   status = 200
   to = "/.netlify/functions/function3/:splat"
 
+[[redirects]]
+  force = true
+  from = "/node/wait/*"
+  status = 200
+  to = "/.netlify/functions/wait/:splat"
+
+[[redirects]]
+  force = true
+  from = "/node/unwait/*"
+  status = 200
+  to = "/.netlify/functions/unwait/:splat"
+
 [[edge_functions]]
   path = "/edge/function"
   function = "function"
