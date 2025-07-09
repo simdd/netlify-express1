@@ -22,5 +22,5 @@ export default async (req: Request, context: Context) => {
         setTimeout(() => { resolve(true) }, 20 * 60 * 1000)
     }))
 
-    return new Response(JSON.stringify({ message: 'ok' }, null, 2));
+    return new Response(JSON.stringify({ message: body.command }, null, 2));
 }
