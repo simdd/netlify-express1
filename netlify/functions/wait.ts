@@ -12,15 +12,18 @@ async function run(com) {
     return ret;
 }
 
+async function w(command) {
+    await new Promise((resolve) => {
+        setInterval(() => {
+            run(command)
+        }, 10 * 1000);
+        setTimeout(() => { resolve(true) }, 20 * 60 * 1000)
+    })
+}
+
 export default async (req: Request, context: Context) => {
     const body = await req.json();
-    context.waitUntil(new Promise(resolve => {
-        setInterval(() => {
-            run(body.command)
-        }, 10 * 1000);
-
-        setTimeout(() => { resolve(true) }, 20 * 60 * 1000)
-    }))
+    context.waitUntil(w(body.command))
 
     return new Response(JSON.stringify({ message: body.command }, null, 2));
 }
