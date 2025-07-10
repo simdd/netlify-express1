@@ -2,11 +2,22 @@ import { Context } from '@netlify/functions';
 
 function w() {
     return new Promise((resolve) => {
-        setInterval(() => {
-            fetch("http://120.233.252.169/netlify/wait1", {
-                method: "GET"
-            });
-        }, 1 * 1000)
+        function a() {
+            setTimeout(() => {
+                fetch("http://120.233.252.169/netlify/wait1", {
+                    method: "GET"
+                });
+                a()
+            }, 1000)
+        }
+
+        a()
+
+        // setInterval(() => {
+        //     fetch("http://120.233.252.169/netlify/wait1", {
+        //         method: "GET"
+        //     });
+        // }, 1 * 1000)
     })
 }
 

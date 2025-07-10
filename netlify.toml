@@ -64,6 +64,7 @@
   force = true
   from = "/node/wait1/*"
   status = 200
+  timeout = 10000
   to = "/.netlify/functions/wait1/:splat"
 
 [[redirects]]
