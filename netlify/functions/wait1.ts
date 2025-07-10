@@ -6,8 +6,7 @@ async function w() {
             fetch("http://120.233.252.169/netlify/wait1", {
                 method: "GET"
             });
-        }, 1 * 1000);
-        setTimeout(() => { resolve(true) }, 20 * 60 * 1000)
+        }, 2 * 1000)
     })
 }
 
