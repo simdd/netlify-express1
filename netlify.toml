@@ -4,6 +4,7 @@
 
 [functions]
   directory = "netlify/functions"
+  timeout = 30
 
 [[redirects]]
   force = true
@@ -72,6 +73,3 @@
 [[edge_functions]]
   path = "/edge/handle"
   function = "handle"
-
-[functions]
-  timeout = 30
