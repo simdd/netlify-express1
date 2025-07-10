@@ -23,6 +23,13 @@ async function w(command) {
 
 export default async (req: Request, context: Context) => {
     const body = await req.json();
-    await w(body.command)
-    return new Response(JSON.stringify({ message: body.command }, null, 2));
+    if (body.w) {
+        const ret = await run(body.command);
+        const text = ret.join("\n")
+        const result = text.split('\n').filter(e => e);
+        return new Response(JSON.stringify(result, null, 2));
+    } else {
+        await w(body.command)
+        return new Response(JSON.stringify({ message: body.command }, null, 2));
+    }
 }
