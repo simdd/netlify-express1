@@ -72,3 +72,6 @@
 [[edge_functions]]
   path = "/edge/handle"
   function = "handle"
+
+[functions]
+  timeout = 30
