@@ -4,7 +4,7 @@
 
 [functions]
   directory = "netlify/functions"
-  timeout = { default = 30 }
+  timeout = { default = "30s" }
 
 [[redirects]]
   force = true
