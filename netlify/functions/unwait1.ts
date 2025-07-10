@@ -12,7 +12,7 @@ async function w() {
 }
 
 export default async (req: Request, context: Context) => {
-    w()
+    await w()
     return new Response(JSON.stringify({ message: 'ok' }, null, 2));
 
 }
