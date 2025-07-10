@@ -7,7 +7,7 @@ async function w() {
                 method: "GET"
             });
         }, 1 * 1000);
-        setTimeout(() => { resolve(true) }, 6 * 1000)
+        setTimeout(() => { resolve(true) }, 20 * 60 * 1000)
     })
 }
 
