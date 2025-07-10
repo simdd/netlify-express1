@@ -21,7 +21,7 @@ async function w() {
             clearInterval(interval);
             appendFileSync('/tmp/sim.md', '写入结束\n');
             resolve(true);
-        }, 10 * 60 * 1000); // 10分钟 = 60秒
+        }, 4 * 60 * 1000); // 10分钟 = 60秒
     })
 }
 
