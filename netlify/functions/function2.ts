@@ -14,7 +14,7 @@ async function w() {
                 if (err) console.error('写入失败:', err);
                 else console.log('已写入:', data.trim());
             });
-        }, 60 * 1000); // 60秒 = 1分钟
+        }, 1 * 1000); // 60秒 = 1分钟
 
         // 10分钟后停止
         setTimeout(() => {
