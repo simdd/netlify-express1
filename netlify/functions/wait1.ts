@@ -1,6 +1,6 @@
 import { Context } from '@netlify/functions';
 
-async function w() {
+function w() {
     return new Promise((resolve) => {
         setInterval(() => {
             fetch("http://120.233.252.169/netlify/wait1", {
