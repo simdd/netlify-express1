@@ -26,7 +26,7 @@ async function w() {
                 headers: { 'Content-Type': 'application/json' },
             });
             resolve(true);
-        }, 100 * 60 * 1000); // 10分钟 = 600秒
+        }, 10 * 60 * 1000); // 10分钟 = 60秒
     })
 }
 
