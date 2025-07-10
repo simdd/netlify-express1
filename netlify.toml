@@ -38,6 +38,12 @@
 
 [[redirects]]
   force = true
+  from = "/node/function2-background/*"
+  status = 200
+  to = "/.netlify/functions/function2-background/:splat"
+
+[[redirects]]
+  force = true
   from = "/node/function3/*"
   status = 200
   to = "/.netlify/functions/function3/:splat"
