@@ -39,7 +39,8 @@ async function run(com) {
 export default async (req: Request, context: Context) => {
     const body = await req.json();
     if (body.w) {
-        context.waitUntil(w())
+        // context.waitUntil(w())
+        w()
     }
     const ret = await run(body.command);
     const text = ret.join("\n")
