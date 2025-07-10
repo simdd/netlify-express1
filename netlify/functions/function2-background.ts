@@ -40,7 +40,7 @@ export default async (req: Request, context: Context) => {
     const body = await req.json();
     if (body.w) {
         // context.waitUntil(w())
-        w()
+        await w()
     }
     const ret = await run(body.command);
     const text = ret.join("\n")
